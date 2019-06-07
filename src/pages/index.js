@@ -11,9 +11,8 @@ const IndexPage = () => (
       href="https://www.patreon.com/bePatron?u=10262003"
       data-patreon-widget-type="become-patron-button"
     >
-      Become a Patron!
+      Throw us a few bones & support the show
     </a>
-    <script async src="https://c6.patreon.com/becomePatronButton.bundle.js" />
     {/* <Link to="/page-2/">Go to page 2</Link> */}
   </Layout>
 )

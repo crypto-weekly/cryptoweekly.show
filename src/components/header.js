@@ -21,39 +21,45 @@ const HeaderImage = () => (
   />
 )
 
+const TitleLink = styled(Link)`
+  color: #111111;
+  font-family: "Ultra";
+  text-transform: uppercase;
+  font-weight: normal;
+  text-decoration: none;
+`
+
 const Container = styled.header`
   background-color: #ffbd3a;
   margin-bottom: 1.45rem;
-  font-family: "Ultra";
+`
+
+const HeaderBody = styled.div`
+  margin: 0 auto;
+  max-width: 960px;
+  padding: 1.45rem 1.0875rem;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
 
   > div {
-    margin: 0 auto;
-    max-width: 960px;
-    padding: 1.45rem 1.0875rem;
-    display: flex;
-    > div {
-      flex: 1;
-      width: 200px;
-    }
+    flex: 1;
+    max-width: 200px;
   }
+`
 
-  a {
-    color: #111111;
-    font-family: "Ultra";
-    text-transform: uppercase;
-    font-weight: normal;
-    text-decoration: none;
-  }
+const HeaderText = styled.h1`
+  max-width: 50%;
 `
 
 const Header = ({ siteTitle }) => (
   <Container>
-    <div>
-      <h1>
-        <Link to="/">{siteTitle}</Link>
-      </h1>
+    <HeaderBody>
+      <HeaderText>
+        <TitleLink to="/">{siteTitle}</TitleLink>
+      </HeaderText>
       <HeaderImage />
-    </div>
+    </HeaderBody>
   </Container>
 )
 
