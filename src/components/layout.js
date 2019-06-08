@@ -11,6 +11,7 @@ import { StaticQuery, graphql } from "gatsby"
 import styled from "styled-components"
 
 import Header from "./header"
+import PanelMembers from "./PanelMembers"
 import "./layout.css"
 
 const MainPage = styled.div`
@@ -35,7 +36,10 @@ const Layout = ({ children }) => (
       <>
         <Header siteTitle={data.site.siteMetadata.title} />
         <MainPage>
-          <main>{children}</main>
+          <main>
+            <PanelMembers />
+            {children}
+          </main>
           <footer>
             © {new Date().getFullYear()}, Crypto Weekly and the Lads
           </footer>
